@@ -6,3 +6,4 @@ export function fetchBatmanMovies (){
         .then((data) => resolve(data))
     })
 }
+

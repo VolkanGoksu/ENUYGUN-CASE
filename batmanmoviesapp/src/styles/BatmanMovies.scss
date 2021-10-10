@@ -1,0 +1,141 @@
+//this is not needed in our css
+body {
+  background-color: #ccc;
+  padding: 48px;
+  font-size: 16px;
+}
+//Breakpoints
+/* Large screens ----------- */
+$super-wide: min-width 1600px;
+/* Desktops and laptops ----------- */
+$wide: min-width 1200px;
+/* Old Desktops and laptops ----------- */
+$desktop: min-width 1024px;
+/* iPads (portrait and landscape) ----------- */
+$tablet-only: min-width 768px max-width 1023px;
+/* iPads (portrait and landscape) ----------- */
+$tablet: min-width 768px;
+/* Smartphones (portrait and landscape) ----------- */
+$mobile-only: min-width 320px max-width 480px;
+/* Smartphones (landscape) ----------- */
+$mobile: min-width 320px;
+
+$font-primary: 'Lato', sans-serif;
+$color-primary: #fa625d;
+$black: rgba(0, 0, 0, 0.9);
+
+$font-card: $font-primary;
+
+$font-tag: $font-card;
+$font-title: $font-card;
+$font-excerpt: $font-card;
+$font-link: $font-card;
+$color-title: $black;
+$color-tag: $color-primary;
+$color-excerpt: $black;
+$color-link: $color-primary;
+
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+
+@mixin button-bg($bg) {
+  background: $bg;
+  &:hover {
+    background:darken($bg,8%);
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background:darken($bg,25%);
+  } 
+}
+.btn-red {
+  @include button-bg(#e74c3c);
+}
+
+
+// this is the card sass
+.card {
+  background-color: #fff;
+  display: flex;
+  // margin-bottom: 20px;
+  // width: 40%;
+  // width: 30%;
+  // float: right;
+
+  margin:10px auto;
+
+
+
+
+
+  .image {
+    line-height: 0;
+    max-width: 200px;
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 1 auto;
+  }
+
+  .wrap {
+    padding: 1.5em 1em;
+  }
+
+  .tag {
+    background-color: $color-tag;
+    font-family: $font-tag;
+    display: inline-block;
+    padding: 8px 1em;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  .title {
+    font-family: $font-title;
+    font-size: 1.5em;
+    margin: 24px 0 16px;
+    line-height: 1.3;
+    
+
+  }
+
+  .excerpt {
+    font-family: $font-excerpt;
+    font-size: 1em;
+    font-weight: bold;
+  }
+
+  .action {
+    position: absolute;
+    bottom: 16px;
+
+    a {
+      color: $color-link;
+      font-family: $font-link;
+      font-weight: 700;
+      font-size: 1em;
+    }
+  }
+}
+
+.btn {
+  
+  color:white;
+  text-decoration:none;
+  padding:5px 10px;
+  border-radius:3px;
+  font-family: 'Poiret One', cursive;
+  font-size:2em;
+ }

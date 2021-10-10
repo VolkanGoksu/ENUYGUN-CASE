@@ -1,27 +1,9 @@
-import React, { useState, useEffect } from 'react'
-import { fetchBatmanMovies } from './services/fetchBatmanMovies'
+import React from 'react'
+import BatmanMovies from './components/BatmanMovies'
 function App() {
-  const [data, setData] = useState([])
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    fetchBatmanMovies().then((res) => {
-      setData(res)
-    })
-    fetchBatmanMovies().finally(() => {
-      setLoading(false)
-    })
-  }, [])
-
-  if (loading) return 'Loading...'
-
-  console.log(data)
-
   return (
     <div>
-      {data.map((x) => (
-        <h2>{x.score}</h2>
-      ))}
+      <BatmanMovies />
     </div>
   )
 }
