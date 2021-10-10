@@ -36,7 +36,9 @@ export default function BatmanMovieCard() {
                   {x.show.premiered} && {x.show.ended}{' '}
                 </div>
                 <div className="action">
-                  <a href class="btn "
+                  <a
+                    href
+                    class="btn "
                     onClick={() => history.push(`movie-detail/${x.show.name}`)}
                   >
                     Show Details
@@ -49,6 +51,4 @@ export default function BatmanMovieCard() {
       ))}
     </div>
   )
-};
-
-
+}
