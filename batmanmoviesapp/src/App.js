@@ -1,9 +1,9 @@
 import React from 'react'
-import BatmanMovies from './components/BatmanMovies'
+import Routes from './Router/Routes'
 function App() {
   return (
     <div>
-      <BatmanMovies />
+       <Routes />
     </div>
   )
 }
